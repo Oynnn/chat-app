@@ -1,7 +1,7 @@
 let ws = require('ws'); //import websocket
 
 let wss /* web socket server */ = new ws.Server({ //initializing server at port 5000
-    port: 5000
+    port: process.env.PORT || 5000
 }, () => console.log('server started'));
 
 wss.on('connection', (ws) =>  { //this function works when a new client connects to a server
