@@ -16,7 +16,7 @@ function WebSock() {
     function connect(e) { //this function is passed in the login button
         e.preventDefault(); //this is needed because after clicking the button, page reloads defaultly
         if(username != '') { //the connection will be terminated only if the nickname is not empty
-            socket.current = new WebSocket('https://chat-app-server-bg3u.onrender.com/'); //connecting to our server, initialized at port 5000
+            socket.current = new WebSocket('wss://chat-app-server-bg3u.onrender.com/'); //connecting to our server, initialized at port 5000
 
             socket.current.onopen = () => { //this function is called when client connects to the server
                 setConnected(true); //set connection of a client to the server as true
