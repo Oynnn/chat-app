@@ -1,10 +1,12 @@
 import React from 'react';
 import styles from '../styles/LoginForm.module.css';
+import Warning from './Warning';
 
 function LoginForm(props) {
     console.log('rendered')
     return (
         <div className={styles.loginFormWrapper}>
+            <Warning />
             <h4 className={styles.title}>Log in!</h4>
             <form>
                 <div className={styles.inputWrapper}>

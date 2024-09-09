@@ -13,7 +13,7 @@ function WebSock() {
     let [connected, setConnected] = useState(false); //state of connection of a client to the server
     let [username, setUsername] = useState(''); //value of username of the client
 
-    function connect(e) { //this function is passed in the login button
+    async function connect(e) { //this function is passed in the login button
         e.preventDefault(); //this is needed because after clicking the button, page reloads defaultly
         if(username != '') { //the connection will be terminated only if the nickname is not empty
             socket.current = new WebSocket('wss://chat-app-server-bg3u.onrender.com/'); //connecting to our server, initialized at port 5000
